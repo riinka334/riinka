@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<!--
+Author: Zukaro Travon
+Date: 12/10/2019
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Zorori Project</title>
+        <meta name="author" content="Zukaro Travon">
+		<meta name="keywords" content="Furry, Zorori, Project, Fansub">
+		<meta name="description" content="Zorori fansub project">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style/style.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/cd5dac9eed.js" crossorigin="anonymous"></script>
+        <script src="scripts/javascript.js"></script>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+    </head>
+    <body onload="javascript:initializeHomePage()">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href=".">Zorori Project</a>
+            <!-- Makes the navbar collapse on a small screen -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-content">
+                <!-- Navbar content goes here (it will collapse if the screen is too small) -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Episodes
+                        </a>
+                        <div class="dropdown-menu bg-dark" aria-labelledby="navbar-dropdown">
+                            <h6 class="dropdown-header">Season 1</h6>
+                            <a class="dropdown-item bg-dark season" href="https://mega.nz/#F!Fd0GxDDK!Oo42ZKN8kk0AzhaU_SS1Yw" target="_blank">Episodes 1 - 10</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!JRFk2QhI!T4pRJPbOqInxbjKOJjemqg" target="_blank">Episodes 11 - 20</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!cIVThbYK!ZCFYU0WMaxUdrk2B14gYHw" target="_blank">Episodes 21 - 30</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!ZBMjUBSQ!ND-i65z0pW863FKmAeB3AQ" target="_blank">Episodes 31 - 40</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!FIsngYLY!OznXbQNsjz5rmX-tAb1oSQ" target="_blank">Episodes 41 - 52</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Season 2</h6>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!EZVBmJhJ!7ZpI-yGOyBPEQZtYZAiDew" target="_blank">Episodes 1 - 10</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!8ANCkZKI!kC0RsZk4v7ERktP_mN-cHQ" target="_blank">Episodes 11 - 20</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!ZM911SLT!i8N4JHUXhB5OsezDWrQDhg" target="_blank">Episodes 21 - 30</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!gZsF0KwT!ePsBGWiU7cPCKp7yqnQiFw" target="_blank">Episodes 31 - 40</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!VNcmSD4C!lcjfd5j-ySGR6p_NdAQEBQ" target="_blank">Episodes 41 - 50</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Season 3</h6>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!kEtjHbJR!cwkmkxIvwhyVEjfyfhpbYA" target="_blank">Episodes 1 - 10</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!kY0SjT5B!7nv3HQKl5jAN31dKScFmiQ" target="_blank">Episodes 11 - 20</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!RJlFmYoK!DyJLR6SEijfuNlKFtWFElQ" target="_blank">Episodes 21 - 30</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!Bd9hCRAC!FeCbmv0-kqwI6oFCwkg5mg" target="_blank">Episodes 31 - 40</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#F!MA0Q0QDK!lYZBLKaBoiAr28943KxzgA" target="_blank">Episodes 41 - 47</a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-header">Movies</h6>
+                            <a class="dropdown-item bg-dark season" href="https://mega.co.nz/#!oRcRnBwZ!zR3R6PLN7F-g12BvE7bZaM1KUN4L4LZzqel-5bWfZjs" target="_blank">Movie 1</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.nz/#!JddD3AIA!Kz_isU_NOzOQCk9LPOSkOkTQ8NOW6v6EYowQmX-C-HU" target="_blank">Movie 2</a>
+                            <a class="dropdown-item bg-dark season" href="https://mega.nz/#!0Z83hSDR!1tqExNVa3SvYIqTGZKOHE4ejmVWvTxz5S4UWFdZgwgI" target="_blank">Movie 3</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="username">
+                        <!-- Populated by JavaScript -->
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="controls">
+                        <!-- Populated by JavaScript -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="row" id="content">
+            <div class="card card-body bg-dark" id="links">
+                <h3>Links</h3>
+                <a class="nav-link bg-dark sidelink" href="https://steamcommunity.com/groups/zorori_group" target="_blank"><i class="fab fa-steam fa-fw"></i> Zorori Fanbase</a>
+                <a class="nav-link bg-dark sidelink" href="https://twitter.com/ZP_Fansubs" target="_blank"><i class="fab fa-twitter fa-fw"></i> @ZP_Fansubs</a>
+                <a class="nav-link bg-dark sidelink" href="https://www.youtube.com/user/ZororiProjectFansub" target="_blank"><i class="fab fa-youtube fa-fw"></i> YouTube</a>
+                <a class="nav-link bg-dark sidelink" href="https://nyaa.si/?f=0&c=0_0&q=zorori-project/" target="_blank"><i class="fas fa-download fa-fw"></i> Nyaa Torrents</a>
+                <hr>
+                <div id="donate">
+                    <script type='text/javascript'>kofiwidget2.init('Support the Project!', '#29abe0', 'T6T4QH6Q');kofiwidget2.draw();</script>
+                </div>
+                <div id="user-controls"> <!-- Toggled by Javascript -->
+                    <hr>
+                    <h3>User Controls</h3>
+                    <a class="nav-link bg-dark sidelink" id="report-issue"><i class="fas fa-exclamation-triangle fa-fw"></i> Report Issue</a>
+                    <a class="nav-link bg-dark sidelink" id="admin-link" href="admin"><i class="fas fa-key fa-fw"></i> Admin Panel</a>
+                    <div class="modal" id="report-modal">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-header bg-dark">
+                                <h3><i class="fas fa-exclamation-triangle fa-fw modal-inner-header"></i> Report Problem</h3>
+                                <span class="close"><i class="fas fa-times-circle fa-fw modal-inner-header"></i></span>
+                            </div>
+                            <div class="modal-inner-content">
+                                <br>
+                                <select class="form-control" id="issue-type">
+                                    <option default selected disabled>Select Problem Type</option>
+                                    <option>Translation Error</option>
+                                    <option>Subtitle Problem</option>
+                                    <option>Website Bug</option>
+                                </select>
+                                <hr>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-heading fa-fw"></i></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="issue-header" placeholder="Title" aria-label="Header" aria-describedby="basic-addon1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-paragraph fa-fw"></i></span>
+                                    </div>
+                                    <textarea class="form-control" placeholder="Describe your issue" id="issue-content" aria-label="Content"></textarea>
+                                </div>
+                                <button type="button" id="report-button" class="btn btn-warning modal-button" onclick="submitReport()">Submit Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body bg-dark" id="main-content">
+                <h3>About</h3>
+                <p>Welcome to the Zorori Project, click the Episodes dropdown for links to the episodes.</p>
+                <hr>
+                <h3>News</h3>
+                <div id="news-section">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+            <div class="card card-body bg-dark" id="social-media">
+                <a class="twitter-timeline" data-lang="en" data-width="100%" data-height="100%" data-dnt="true" data-theme="dark" href="https://twitter.com/ZP_Fansubs?ref_src=twsrc%5Etfw">Tweets by ZP_Fansubs</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        <br>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBELFn5ghg63A5OElhsd9QhWfQXPCOlgkY",
+                authDomain: "zorori-5ec44.firebaseapp.com",
+                databaseURL: "https://zorori-5ec44.firebaseio.com",
+                projectId: "zorori-5ec44",
+                storageBucket: "zorori-5ec44.appspot.com",
+                messagingSenderId: "51891954873",
+                appId: "1:51891954873:web:6a8e150b2f14c5cbdea768"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+    </body>
+</html>

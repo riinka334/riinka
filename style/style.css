@@ -1,0 +1,208 @@
+/*
+Author: Zukaro Travon
+Date: 12/10/2019
+*/
+
+* {
+    border-radius: 0 !important;
+}
+
+body {
+    background: url("http://www.zorori.jp/contents/quiz/wallpaper/01.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+#controls {
+    padding-left: 5px;
+}
+
+#avatar {
+    width: 100px;
+    background-color: grey;
+}
+
+#avatar-container {
+    max-width: 110px;
+}
+
+#username {
+    padding-left: 5px;
+    color: white;
+}
+
+#uid-profile {
+    padding-left: 5px;
+    color: grey;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+#logout {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+#current-user {
+    color: orange;
+}
+
+#content {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.9;
+    background-color: #222;
+    border-color: #080808;
+    color: white;
+}
+
+#main-content {
+    width: 50%;
+}
+
+#admin-panel {
+    max-width: 450px;
+}
+
+#donate {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#desktopdate, #desktoptime, #mobiledate, #mobiletime {
+    color: white;
+    font-family: monospace;
+}
+
+#issue-content {
+    resize: none;
+}
+
+#report-heading {
+    color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #grey;
+  width: 100%;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+.modal-inner-content {
+    width: 80%;
+    margin: auto;
+}
+
+.modal-button {
+    width: 100%;
+}
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-inner-header {
+    padding-top: 10px;
+}
+
+.close:hover, .close:focus {
+  color: white;
+}
+
+.modal-header {
+  padding: 2px 16px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.twitter-timeline {
+    min-height: 1010px !important;
+}
+
+.admins-uid, .users-uid {
+    color: grey;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.datetime {
+    font-size: 15px;
+    font-family: monospace;
+}
+
+.news-item, .report-item, hr {
+    border-color: grey;
+}
+
+.season:active, .sidelink:active {
+    color: grey;
+}
+
+.sidelink:link, .sidelink:visited, .sidelink:hover, .season:hover, .season, #adduser, #deluser {
+    color: white;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1260px) {
+    #content {
+        width: 100%;
+    }
+
+    #admin-panel {
+        max-width: 100%;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}

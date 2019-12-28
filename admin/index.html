@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<!--
+Author: Zukaro Travon
+Date: 12/10/2019
+-->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Zorori Project - Admin Panel</title>
+        <meta name="author" content="Zukaro Travon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../style/style.css"/>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/cd5dac9eed.js" crossorigin="anonymous"></script>
+        <script src="../scripts/javascript.js"></script>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+    </head>
+    <body onload="javascript:initializeAdminPanel()">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../">Zorori Project</a>
+        </nav>
+        <br>
+        <div class="row" id="content">
+            <div class="card card-body bg-dark" id="admin-panel">
+                <div class="card-group">
+                    <div class="card bg-dark" id="avatar-container">
+                        <img id="avatar"/>
+                    </div>
+                    <div id="usercard" class="card bg-dark">
+                        <span id="username"></span>
+                    </div>
+                </div>
+                <hr>
+                <h3>Admin Panel</h3>
+                <hr>
+                <div class="input-group mb-3 desktop">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar fa-fw"></i></span>
+                    </div>
+                    <input type="text" class="form-control bg-dark" id="desktopdate" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1" disabled>
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-clock fa-fw"></i></span>
+                    </div>
+                    <input type="text" class="form-control bg-dark col-4" id="desktoptime" placeholder="Time" aria-label="Time" aria-describedby="basic-addon1" disabled>
+                </div>
+                <div class="mobile">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-calendar fa-fw"></i></span>
+                        </div>
+                        <input type="text" class="form-control bg-dark" id="mobiledate" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1" disabled>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-clock fa-fw"></i></span>
+                        </div>
+                        <input type="text" class="form-control bg-dark" id="mobiletime" placeholder="Time" aria-label="Time" aria-describedby="basic-addon1" disabled>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-heading fa-fw"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="news-header" placeholder="Header" aria-label="Header" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-image fa-fw"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="news-src" placeholder="Image URL" aria-label="Image URL" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-paragraph fa-fw"></i></span>
+                    </div>
+                    <textarea class="form-control" placeholder="Content" id="news-content" aria-label="Content"></textarea>
+                </div>
+                <button type="button" id="submit" class="btn btn-success" onclick="javascript:writeNews()">Submit News Item</button>
+                <button type="button" id="cancel" class="btn btn-danger" onclick="javascript:resetPage()">Cancel</button>
+                <hr>
+                <div class="card card-body bg-dark">
+                    <h3>Admins</h3>
+                    <div id="admin-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    <hr>
+                    <h3>Users</h3>
+                    <div id="user-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <div class="card card-body bg-dark" id="main-content">
+                <div class="card bg-dark">
+                    <div class="card-header">
+                        <h3 class="card-title">
+                            <a data-toggle="collapse" id="report-heading" href="#reports" aria-expanded="false"><i class="fas fa-chevron-right fa-fw" id="indicator"></i> Reports</a>
+                        </h3>
+                    </div>
+                    <div id="reports" class="card-body collapse">
+                        <div class="panel-body" id="report-section">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h3>News</h3>
+                <div id="news-section">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <br>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyBELFn5ghg63A5OElhsd9QhWfQXPCOlgkY",
+                authDomain: "zorori-5ec44.firebaseapp.com",
+                databaseURL: "https://zorori-5ec44.firebaseio.com",
+                projectId: "zorori-5ec44",
+                storageBucket: "zorori-5ec44.appspot.com",
+                messagingSenderId: "51891954873",
+                appId: "1:51891954873:web:6a8e150b2f14c5cbdea768"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+    </body>
+</html>
